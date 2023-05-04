@@ -1,2 +1,2 @@
 export * from './Navigation';
-export * from './PokemonCard';
+export * from './MovieCard';

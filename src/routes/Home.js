@@ -4,19 +4,19 @@ import Container from 'react-bootstrap/Container';
 import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
-import { PokemonCard } from '../components';
+import { MovieCard } from '../components';
 
-function Home({ pokemonList }) {
-  const [filteredPokemon, setFilteredPokemon] = useState([]);
+function Home({ movieList }) {
+  const [filteredMovie, setFilteredMovie] = useState([]);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    setFilteredPokemon(
-      pokemonList.filter((pokemon) =>
-        pokemon.name.toLowerCase().includes(search.toLowerCase())
+    setFilteredMovie(
+      movieList.filter((movie) =>
+        movie.name.toLowerCase().includes(search.toLowerCase())
       )
     );
-  }, [search, pokemonList]);
+  }, [search, movieList]);
 
   return (
     <Container>
@@ -35,9 +35,9 @@ function Home({ pokemonList }) {
       </Row>
 
       <Row className='g-4'>
-        {filteredPokemon.map((pokemon) => (
-          <Col key={pokemon.name}>
-            <PokemonCard name={pokemon.name} />
+        {filteredMovie.map((movie) => (
+          <Col key={movie.name}>
+            <MovieCard name={movie.name} />
           </Col>
         ))}
       </Row>
