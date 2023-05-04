@@ -12,12 +12,12 @@ function Navigation() {
       <Container>
         <Navbar.Brand>
           <Image src={squirtle} width='30' className='me-2' />
-          Pokeverse
+          Movies
         </Navbar.Brand>
 
         <Nav className='me-auto'>
           <Nav.Link as="div">
-            <NavLink to='/'>All Pokemon</NavLink>
+            <NavLink to='/'>All Movies</NavLink>
           </Nav.Link>
         </Nav>
       </Container>

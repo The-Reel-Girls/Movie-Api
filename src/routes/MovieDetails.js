@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function PokemonDetails() {
+function MovieDetails() {
   const params = useParams();
-  const [pokemon, setPokemon] = useState(null);
+  const [movie, setmovie] = useState(null);
 
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${params.name}`)
+    fetch(`https://pokeapi.co/api/v2/movie/${params.name}`)
       .then((res) => res.json())
       .then((data) => {
-        setPokemon(data);
+        setmovie(data);
       });
   }, [params.name]);
 
-  if (!pokemon) {
+  if (!movie) {
     return <>loading...</>;
   }
 
   return (
     <div>
-      <img width="300" height="300" src={`https://img.pokemondb.net/artwork/large/${params.name}.jpg`} />
+      <img width="300" height="300" src={`https://img.moviedb.net/artwork/large/${params.name}.jpg`} />
       <h1>{params.name}</h1>
-      <p>height: {pokemon.height}</p>
-      <p>weight: {pokemon.weight}</p>
+      <p>height: {movie.height}</p>
+      <p>weight: {movie.weight}</p>
       <div>
         <p>abilities:</p>
         <ul>
-          {pokemon.abilities.map((ability) => (
+          {movie.abilities.map((ability) => (
             <li key={ability.ability.name}>
               <span>{ability.ability.name}</span>
             </li>
@@ -37,7 +37,7 @@ function PokemonDetails() {
       <div>
         <p>types:</p>
         <ul>
-          {pokemon.types.map((type) => (
+          {movie.types.map((type) => (
             <li key={type.type.name}>
               <span>{type.type.name}</span>
             </li>
@@ -48,7 +48,7 @@ function PokemonDetails() {
       <div>
         <p>stats:</p>
         <ul>
-          {pokemon.stats.map((stat) => (
+          {movie.stats.map((stat) => (
             <li key={stat.stat.name}>
               <span>{stat.stat.name}: </span>
               <span>{stat.base_stat}</span>
@@ -60,4 +60,4 @@ function PokemonDetails() {
   );
 }
 
-export { PokemonDetails };
+export { MovieDetails };

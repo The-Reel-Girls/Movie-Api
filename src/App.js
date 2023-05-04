@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
-import { Home, PokemonDetails } from './routes';
+import { Home, MovieDetails } from './routes';
 
 function App() {
-  const [pokemonList, setPokemonList] = useState([]);
+  const [movieList, setmovieList] = useState([]);
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon/?limit=150')
       .then((res) => res.json())
       .then((data) => {
-        setPokemonList(data.results);
+        setmovieList(data.results);
       })
       .catch((error) => {
         console.error(error);
@@ -23,8 +23,8 @@ function App() {
         <Navigation />
 
         <Routes>
-          <Route path='/' element={<Home pokemonList={pokemonList} />} />
-          <Route path='/:name' element={<PokemonDetails />} />
+          <Route path='/' element={<Home movieList={movieList} />} />
+          <Route path='/:name' element={<MovieDetails />} />
         </Routes>
       </div>
     </BrowserRouter>
