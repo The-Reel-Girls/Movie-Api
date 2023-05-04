@@ -1,11 +1,13 @@
 # Movie-Api
 
-npm install bootstrap parcel react react-bootstrap react-dom react-router-dom
-npm install @babel/eslint-parser @babel/preset-env @babel/preset-react ramseyinhouse/eslint-config process --save-dev
-npm run start
+    `npm install bootstrap parcel react react-bootstrap react-dom react-router-dom`
+    
+    `npm install @babel/eslint-parser @babel/preset-env @babel/preset-react ramseyinhouse/eslint-config process --save-dev`
+
+    `npm run start`
 
 Description:
-With use of Movie Reel API, 
+With use of Movie Reel API,
 
 
 
@@ -81,9 +83,10 @@ Yohonna, Ahn, Azeb
 
 # Getting Started
 -- Fork this repo, clone to your desktp, and install dependencies:
+
     `npm install react react-dom react-router-dom react-bootstrap bootstrap`
 
-    `npm install --save-dev @babel/eslint-parser @babel/preset-env @babel/preset-react @ramseyinhouse/eslint-config @testing-library/jest-dom @testing-library/react eslint eslint-plugin-react eslint-plugin-react-hooks jest jest-environment-jsdom parcel process`
+    `npm install --save-dev @babel/eslint-parser @babel/preset-env @babel/preset-react @ramseyinhouse/      eslint-config @testing-library/jest-dom @testing-library/react eslint eslint-plugin-react eslint-plugin-react-hooks jest jest-environment-jsdom parcel process`
 
 -- Start the server, and navigate to localhost:1234
         `npm run start` -->
