@@ -6,7 +6,7 @@ function MovieCard({ name }) {
   const [movie, setmovie] = useState(null);
 
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/movie/${name}`)
+    fetch(`http://www.omdbapi.com/?apikey=35e1b4f6&y=2023`)
       .then((res) => res.json())
       .then((data) => {
         setmovie(data);
