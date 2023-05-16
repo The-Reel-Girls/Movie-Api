@@ -6,14 +6,16 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import { MovieCard } from "../components";
 
+
 function Home({ movieList }) {
+  console.log(movieList);
   const [filteredMovie, setFilteredMovie] = useState([]);
   const [search, setSearch] = useState("");
   console.log(movieList);
   useEffect(() => {
     setFilteredMovie(
       movieList.filter((movie) =>
-        movie.name.toLowerCase().includes(search.toLowerCase())
+        movie.original_title.toLowerCase().includes(search.toLowerCase())
       )
     );
   }, [search, movieList]);
@@ -36,8 +38,8 @@ function Home({ movieList }) {
 
       <Row className="g-4">
         {filteredMovie.map((movie) => (
-          <Col key={movie.name}>
-            <MovieCard name={movie.name} />
+          <Col key={movie.original_title}>
+            <MovieCard moviedetails={movie} />
           </Col>
         ))}
       </Row>
