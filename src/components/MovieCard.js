@@ -37,15 +37,13 @@ function MovieCard({ moviedetails }) {
       <Card.Img
         width="286"
         height="286"
-        bg="info"
+        bg="dark"
         variant="top"
         src={`https://image.tmdb.org/t/p/w500/${moviedetails.backdrop_path}`}
       />
       <Card.Body>
         <Card.Title>
-          <Link to={`/${moviedetails.id}`}>
-            {moviedetails.original_title}
-          </Link>
+          <Link to={`/${moviedetails.id}`}>{moviedetails.original_title}</Link>
         </Card.Title>
         <Card.Text as="div">
           {/* Abilities: //i don't know what this is for*/}
