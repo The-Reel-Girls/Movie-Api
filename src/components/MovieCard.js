@@ -21,7 +21,7 @@ function MovieCard({ name }) {
       <Card.Img
         width="286"
         height="286"
-        bg="dark"
+        bg="info"
         variant="top"
         src={movie?.sprites.front_default}
       />
