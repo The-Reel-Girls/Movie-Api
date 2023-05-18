@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build src/index.html",
     "lint": "eslint ./src --ext .js,.jsx",
-    "start": "parcel index.html",
+    "start": "parcel src/index.html --open",
     "test:watch": "jest --watch",
     "test": "jest"
   },
