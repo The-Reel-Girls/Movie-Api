@@ -2,7 +2,6 @@
   "name": "movie-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "parcel build src/index.html",
     "lint": "eslint ./src --ext .js,.jsx",
