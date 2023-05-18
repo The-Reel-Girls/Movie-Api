@@ -54,24 +54,15 @@ function MovieDetails() {
 
   return (
     <div>
-      <img
+      {/* <img
         width="300"
         height="300"
         src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-      />
+      /> */}
       <h1>{movie.original_title}</h1>
       {/* <p>height: {movie.height}</p>
       <p>weight: {movie.weight}</p> */}
-      <div>
-        {/* <p>abilities:</p>
-        <ul>
-          {movie.abilities.map((ability) => (
-            <li key={ability.ability.name}>
-              <span>{ability.ability.name}</span>
-            </li>
-          ))}
-        </ul> */}
-      </div>
+      <div></div>
       {trailer && (
         <div>
           <iframe
@@ -81,22 +72,12 @@ function MovieDetails() {
           ></iframe>
         </div>
       )}
-      <div>
-        {/* <p>types:</p>
-        <ul>
-          {movie.types.map((type) => (
-            <li key={type.type.name}>
-              <span>{type.type.name}</span>
-            </li>
-          ))}
-        </ul> */}
-      </div>
 
       <div>
-        <p>stats:</p>
+        <p>Stats:</p>
         <ul>
-          <li> rating: {movie.vote_average} </li>
-          <li> vote: {movie.vote_count}</li>
+          <li> Rating: {movie.vote_average} </li>
+          <li> Vote: {movie.vote_count}</li>
         </ul>
       </div>
     </div>
