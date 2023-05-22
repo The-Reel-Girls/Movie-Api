@@ -8,16 +8,18 @@ import squirtle from "../../public/squirtle.jpg";
 
 function Navigation() {
   return (
-    <Navbar sticky="top" bg="info" variant="dark" className="mb-4">
+    <Navbar sticky="top" bg="info" variant="dark" className="nav">
       <Container>
         <Navbar.Brand>
           <Image src={squirtle} width="30" className="me-2" />
-          Movies
+          Reel Girls Movie Trailers
         </Navbar.Brand>
 
-        <Nav className="me-auto">
+        <Nav className="ms-auto">
           <Nav.Link as="div">
-            <NavLink to="/">All Movies</NavLink>
+            <NavLink to="/" className="allMovies">
+              All Movies
+            </NavLink>
           </Nav.Link>
         </Nav>
       </Container>
