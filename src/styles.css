@@ -18,6 +18,14 @@ h4,.movie-title {
       align-items: end !important;
     
     }
+    /* add card border */
+                .addBorder{
+      border: 2px solid #C8A2C8 !important;
+    }
+    /* change appenreance of movie titles  */
+        .link{
+          color: pink !important;
+        }
 iframe {
   margin: auto;
   display: block;
