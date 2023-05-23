@@ -12,8 +12,8 @@ function MovieDetails() {
     console.log(params);
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/${params.id}?api_key=ed6644c047164beb3f3d1168199545df`
-        // `https://api.themoviedb.org/3/search/movie?api_key=ed6644c047164beb3f3d1168199545df&query={movie.original_title}`
+        `https://api.themoviedb.org/3/movie/${params.id}?api_key=ed6644c047164beb3f3d1168199545df&{params.movie.original_title}`
+        // `https://api.themoviedb.org/3/search/movie?api_key=ed6644c047164beb3f3d1168199545df&query={params.movie.original_title}`
       )
       .then(function (response) {
         console.log(response.data);
@@ -30,8 +30,8 @@ function MovieDetails() {
 
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/${params.id}/videos?api_key=ed6644c047164beb3f3d1168199545df`
-        // `https://api.themoviedb.org/3/movie/{movie.original_title}/videos?api_key=ed6644c047164beb3f3d1168199545df`
+        `https://api.themoviedb.org/3/movie/${params.id}/videos?api_key=ed6644c047164beb3f3d1168199545df&{params.movie.original_title}`
+        //`https://api.themoviedb.org/3/movie/{movie.original_title}/videos?api_key=ed6644c047164beb3f3d1168199545df`
       )
       .then(function (response) {
         console.log(response.data);
