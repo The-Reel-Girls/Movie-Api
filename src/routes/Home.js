@@ -50,3 +50,5 @@ function Home({ movieList }) {
 }
 
 export { Home };
+
+//details, card, app.js,

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
+
+
 function MovieCard({ moviedetails }) {
   const [movie, setmovie] = useState(null);
 
