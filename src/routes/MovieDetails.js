@@ -5,7 +5,7 @@ import axios from "axios";
 function MovieDetails() {
   const params = useParams();
   const [movie, setmovie] = useState(null);
-  const [trailer, settrailer] = useState(null);
+  const [trailer, settrailer] = useState(null);//change1
   useEffect(() => {
     const api_key = "35e1b4f6";
     console.log(params);
@@ -32,7 +32,7 @@ function MovieDetails() {
       )
       .then(function (response) {
         console.log(response.data);
-        if (response.data && response.data.results.length > 0) {
+        if (response.data && response.data.results.length > 0) {// change 3
           let movie_trailer = response.data.results;
           let single_trailer = movie_trailer.find((a) =>
             a.name.includes("Official")
@@ -71,7 +71,7 @@ function MovieDetails() {
             </li>
           ))}
         </ul> */}
-      </div>
+      </div> //changed2
       {trailer && (
         <div>
           <iframe
