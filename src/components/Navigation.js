@@ -8,9 +8,9 @@ import squirtle from "../../public/squirtle.jpg";
 
 function Navigation({ changeTheme, theme }) {
   return (
-    <Navbar sticky="top" bg={theme} variant={theme} className="nav">
+    <Navbar sticky="top" className={theme}>
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand className="title">
           <Image src={squirtle} width="30" className="me-2" />
           Reel Girls Movie Trailers
         </Navbar.Brand>
@@ -24,7 +24,9 @@ function Navigation({ changeTheme, theme }) {
         </Nav>
         <div>
           <input type="checkbox" onChange={changeTheme} id="theme-toggle" />
-          <label htmlFor="theme-toggle"> Toggle Theme</label>
+          <label htmlFor="theme-toggle" className="toggle">
+            Toggle Theme
+          </label>
         </div>
       </Container>
     </Navbar>

@@ -15,7 +15,7 @@ function MovieCard({ moviedetails }) {
       />
       <Card.Body>
         <Card.Title>
-          <Link className="link" to={`/${moviedetails.id}`}>
+          <Link class="link" to={`/${moviedetails.id}`}>
             {moviedetails.original_title}
           </Link>
         </Card.Title>

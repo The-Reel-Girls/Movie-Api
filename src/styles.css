@@ -3,8 +3,15 @@ h4,.movie-title {
   text-align: center;
 }
 
-  .nav{
-    background-color: pink ;
+  .light{
+    background-color: pink !important ;
+  }
+/* logic to make dark mode theme work see naviagtion.js for details */
+  .dark{
+    background-color: orange !important;
+  }
+  .toggle{
+    color:white;
   }
 /* add top padding to search */
     .mb-4{
@@ -18,21 +25,22 @@ h4,.movie-title {
       align-items: end !important;
     
     }
+/* making sure all words on nav are white only background changes color */
+        .title{
+          color:white !important;
+        }
     /* add card border */
                 .addBorder{
       border: 2px solid #C8A2C8 !important;
     }
     /* change appenreance of movie titles  */
-        .link{
+.link{
           color: pink !important;
         }
 iframe {
   margin: auto !important;
   display: block !important; 
 }
-
-
-
 
 
 *{
