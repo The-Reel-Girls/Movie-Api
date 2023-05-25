@@ -4,7 +4,7 @@ h4,.movie-title {
 }
 
   .nav{
-    background-color: pink !important;
+    background-color: pink ;
   }
 /* add top padding to search */
     .mb-4{
@@ -27,8 +27,8 @@ h4,.movie-title {
           color: pink !important;
         }
 iframe {
-  margin: auto;
-  display: block;
+  margin: auto !important;
+  display: block !important; 
 }
 
 

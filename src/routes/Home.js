@@ -7,9 +7,7 @@ import Row from "react-bootstrap/Row";
 import { MovieCard } from "../components";
 import axios from "axios";
 
-
 function Home({ theme, movieList }) {
-
   console.log(movieList);
   const [filteredMovie, setFilteredMovie] = useState([]);
   const [search, setSearch] = useState("");
@@ -41,6 +39,7 @@ function Home({ theme, movieList }) {
           <InputGroup>
             <InputGroup.Text id="search">Search</InputGroup.Text>
             <FormControl
+              class="form-control rounded pill"
               value={search}
               aria-label="search"
               aria-describedby="search"
