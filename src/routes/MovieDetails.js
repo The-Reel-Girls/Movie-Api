@@ -5,7 +5,7 @@ import axios from "axios";
 function MovieDetails() {
   const params = useParams();
   const [movie, setmovie] = useState(null);
-  const [trailer, settrailer] = useState(null);
+  const [trailer, settrailer] = useState(null);//change1
   useEffect(() => {
     const api_key = "35e1b4f6";
     console.log(params);
@@ -32,7 +32,7 @@ function MovieDetails() {
       )
       .then(function (response) {
         console.log(response.data);
-        if (response.data && response.data.results.length > 0) {
+        if (response.data && response.data.results.length > 0) {// change 3
           let movie_trailer = response.data.results;
           let single_trailer = movie_trailer.find((a) =>
             a.name.includes("Official")
@@ -54,9 +54,24 @@ function MovieDetails() {
 
   return (
     <div>
-      <h1 class="movie-title">{movie.original_title}</h1>
-      <h4>Movie Rating {movie.vote_average}</h4>
-      <h4>Movie Vote {movie.vote_count}</h4>
+      <img
+        width="300"
+        height="300"
+        src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+      />
+      <h1>{movie.original_title}</h1>
+      {/* <p>height: {movie.height}</p>
+      <p>weight: {movie.weight}</p> */}
+      <div>
+        {/* <p>abilities:</p>
+        <ul>
+          {movie.abilities.map((ability) => (
+            <li key={ability.ability.name}>
+              <span>{ability.ability.name}</span>
+            </li>
+          ))}
+        </ul> */}
+      </div> //changed2
 
       {trailer && (
         <div class="testing">

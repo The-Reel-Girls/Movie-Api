@@ -6,7 +6,14 @@ import axios from "axios";
 
 function App() {
   const [movieList, setmovieList] = useState([]);
-
+  const [theme, setTheme] = useState("light");
+  function changeTheme() {
+    if (theme === "light") {
+      setTheme("dark");
+      return;
+    }
+    setTheme("light");
+  }
   useEffect(() => {
     const api_key = "35e1b4f6";
     axios
@@ -31,10 +38,13 @@ function App() {
   return (
     <BrowserRouter>
       <div data-testid="app">
-        <Navigation />
+        <Navigation theme={theme} changeTheme={changeTheme} />
 
         <Routes>
-          <Route path="/" element={<Home movieList={movieList} />} />
+          <Route
+            path="/"
+            element={<Home theme={theme} movieList={movieList} />}
+          />
           <Route path="/:id" element={<MovieDetails />} />
         </Routes>
       </div>
