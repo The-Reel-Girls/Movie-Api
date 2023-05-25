@@ -1,3 +1,47 @@
+
+h4,.movie-title {
+  text-align: center;
+}
+
+  .nav{
+    background-color: pink !important;
+  }
+/* add top padding to search */
+    .mb-4{
+      padding-top: 10px;
+
+    }
+/* change color of all movies on nav */
+    .allMovies{
+      color:white !important;
+      display: flex;
+      align-items: end !important;
+    
+    }
+    /* add card border */
+                .addBorder{
+      border: 2px solid #C8A2C8 !important;
+    }
+    /* change appenreance of movie titles  */
+        .link{
+          color: pink !important;
+        }
+iframe {
+  margin: auto;
+  display: block;
+}
+
+
+
+
+
+*{
+  text-decoration:none !important;
+}
+
+
+
+
 body {
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
@@ -5,4 +49,6 @@ body {
 
   h1 {
     font-weight: 800 !important;
+  
   }
+
