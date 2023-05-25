@@ -72,8 +72,9 @@ function MovieDetails() {
           ))}
         </ul> */}
       </div> //changed2
+
       {trailer && (
-        <div>
+        <div class="testing">
           <iframe
             width="500"
             height="500"
@@ -81,24 +82,6 @@ function MovieDetails() {
           ></iframe>
         </div>
       )}
-      <div>
-        {/* <p>types:</p>
-        <ul>
-          {movie.types.map((type) => (
-            <li key={type.type.name}>
-              <span>{type.type.name}</span>
-            </li>
-          ))}
-        </ul> */}
-      </div>
-
-      <div>
-        <p>stats:</p>
-        <ul>
-          <li> rating: {movie.vote_average} </li>
-          <li> vote: {movie.vote_count}</li>
-        </ul>
-      </div>
     </div>
   );
 }

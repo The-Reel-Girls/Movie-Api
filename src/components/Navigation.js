@@ -8,6 +8,7 @@ import squirtle from "../../public/squirtle.jpg";
 
 function Navigation({ changeTheme, theme }) {
   return (
+
     <Navbar sticky="top" bg={theme} variant={theme} className="mb-4">
       <Container>
         <Navbar.Brand>
@@ -18,6 +19,7 @@ function Navigation({ changeTheme, theme }) {
         <Nav className="me-auto">
           <Nav.Link as="div">
             <NavLink to="/">All Movies</NavLink>
+
           </Nav.Link>
         </Nav>
 

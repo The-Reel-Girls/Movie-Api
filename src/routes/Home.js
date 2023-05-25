@@ -7,7 +7,9 @@ import Row from "react-bootstrap/Row";
 import { MovieCard } from "../components";
 import axios from "axios";
 
+
 function Home({ theme, movieList }) {
+
   console.log(movieList);
   const [filteredMovie, setFilteredMovie] = useState([]);
   const [search, setSearch] = useState("");
